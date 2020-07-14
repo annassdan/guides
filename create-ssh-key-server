@@ -1,0 +1,4 @@
+# check for existing SSH keys on server
+$ ls -al ~/.ssh
+# Lists all the files in your .ssh directory, if they exist
+Generating public/private rsa key pair
