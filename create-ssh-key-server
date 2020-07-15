@@ -2,3 +2,26 @@
 $ ls -al ~/.ssh
 # Lists all the files in your .ssh directory, if they exist
 Generating public/private rsa key pair
+
+# if not exista
+mkdir -p $HOME/.ssh
+chmod 0700 $HOME/.ssh
+
+# just use putty 
+create pub and private key using putty generator
+
+# copy public key to server with format "ssh-rsa [public-key] [comment]",
+# can use "vi" or "nano", etc
+vi ~/.ssh/authorized_keys
+
+# change "authorized_keys" permissions
+chmod 600 ~/.ssh/authorized_keys
+
+# try connect using putty on auth
+- Enter the remote server Host Name or IP address under Session.
+- Navigate to Connection > SSH > Auth.
+- Click Browse... under Authentication parameters / Private key file for authentication.
+- Locate the id_rsa.ppk private key and click Open.
+**Finally, click Open again to log into the remote server with key pair authentication.
+
+
